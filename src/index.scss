@@ -42,16 +42,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: transparent;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -63,7 +59,7 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: transparent;
   }
 }
 
@@ -76,21 +72,13 @@ body {
 
 @mixin foodColoring($color) {
   background-color: $color;
-  box-shadow:
-    0 2px 0px lighten($color, 5%),
-    0 4px 0px darken($color, 8.2%),
-    0 6px 0px darken($color, 8.4%),
-    0 8px 0px darken($color, 8.6%),
-    0 10px 0px darken($color, 8.8%),
-    0 12px 0px darken($color, 9%),
-    0 14px 0px darken($color, 9.2%),
-    0 16px 0px darken($color, 9.4%),
-    0 18px 0px darken($color, 9.6%),
-    0 20px 0px darken($color, 9.8%),
-    0 22px 0px darken($color, 10%),
-    0 24px 0px darken($color, 10.2%),
-    0 26px 0px darken($color, 10.4%),
-    0 28px 0px darken($color, 10.6%),
+  box-shadow: 0 2px 0px lighten($color, 5%), 0 4px 0px darken($color, 8.2%),
+    0 6px 0px darken($color, 8.4%), 0 8px 0px darken($color, 8.6%),
+    0 10px 0px darken($color, 8.8%), 0 12px 0px darken($color, 9%),
+    0 14px 0px darken($color, 9.2%), 0 16px 0px darken($color, 9.4%),
+    0 18px 0px darken($color, 9.6%), 0 20px 0px darken($color, 9.8%),
+    0 22px 0px darken($color, 10%), 0 24px 0px darken($color, 10.2%),
+    0 26px 0px darken($color, 10.4%), 0 28px 0px darken($color, 10.6%),
     0 30px 0px darken($color, 10.8%);
 }
 
@@ -112,9 +100,7 @@ body {
   left: -10px;
   background-color: #ccc;
   border-radius: 50%;
-  box-shadow:
-    0 2px 0 darken(#ccc, 10%),
-    0 4px 0 darken(#ccc, 10%),
+  box-shadow: 0 2px 0 darken(#ccc, 10%), 0 4px 0 darken(#ccc, 10%),
     0 5px 40px rgba(black, 0.5);
 }
 
@@ -156,9 +142,7 @@ body {
     bottom: 6px;
     left: 5px;
     background-color: lighten($vanilla, 3%);
-    box-shadow:
-      0 0 4px lighten($vanilla, 5%),
-      0 0 4px lighten($vanilla, 5%),
+    box-shadow: 0 0 4px lighten($vanilla, 5%), 0 0 4px lighten($vanilla, 5%),
       0 0 4px lighten($vanilla, 5%);
     border-radius: 50%;
     z-index: 1;
@@ -197,24 +181,62 @@ body {
 }
 
 .candle {
-  background-color: #7b020b;
-  width: 16px;
-  height: 50px;
-  border-radius: 8px / 4px;
-  top: -20px;
-  left: 50%;
-  margin-left: -8px;
   z-index: 10;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 16px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: lighten(#7b020b, 10%);
-  }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 47px;
+  height: 58px;
+}
+
+.candle-p1 {
+  top: -35px;
+  left: 30%;
+}
+
+.candle-p2 {
+  top: -35px;
+  left: 50%;
+}
+
+.candle-0 {
+  background-image: url("../number-0.png");
+}
+
+.candle-1 {
+  background-image: url("../number-1.png");
+}
+
+.candle-2 {
+  background-image: url("../number-2.png");
+}
+
+.candle-3 {
+  background-image: url("../number-3.png");
+}
+
+.candle-4 {
+  background-image: url("../number-4.png");
+}
+
+.candle-5 {
+  background-image: url("../number-5.png");
+}
+
+.candle-6 {
+  background-image: url("../number-6.png");
+}
+
+.candle-7 {
+  background-image: url("../number-7.png");
+}
+
+.candle-8 {
+  background-image: url("../number-8.png");
+}
+
+.candle-9 {
+  background-image: url("../number-9.png");
 }
 
 .flame {
@@ -227,11 +249,8 @@ body {
   left: 50%;
   margin-left: -7.5px;
   z-index: 10;
-  box-shadow:
-    0 0 10px rgba(orange, 0.5),
-    0 0 20px rgba(orange, 0.5),
-    0 0 60px rgba(orange, 0.5),
-    0 0 80px rgba(orange, 0.5);
+  box-shadow: 0 0 10px rgba(orange, 0.5), 0 0 20px rgba(orange, 0.5),
+    0 0 60px rgba(orange, 0.5), 0 0 80px rgba(orange, 0.5);
   transform-origin: 50% 90%;
   animation: flicker 1s ease-in-out alternate infinite;
 }
@@ -239,42 +258,27 @@ body {
 @keyframes flicker {
   0% {
     transform: skewX(5deg);
-    box-shadow:
-      0 0 10px rgba(orange, 0.2),
-      0 0 20px rgba(orange, 0.2),
-      0 0 60px rgba(orange, 0.2),
-      0 0 80px rgba(orange, 0.2);
+    box-shadow: 0 0 10px rgba(orange, 0.2), 0 0 20px rgba(orange, 0.2),
+      0 0 60px rgba(orange, 0.2), 0 0 80px rgba(orange, 0.2);
   }
   25% {
     transform: skewX(-5deg);
-    box-shadow:
-      0 0 10px rgba(orange, 0.5),
-      0 0 20px rgba(orange, 0.5),
-      0 0 60px rgba(orange, 0.5),
-      0 0 80px rgba(orange, 0.5);
+    box-shadow: 0 0 10px rgba(orange, 0.5), 0 0 20px rgba(orange, 0.5),
+      0 0 60px rgba(orange, 0.5), 0 0 80px rgba(orange, 0.5);
   }
   50% {
     transform: skewX(10deg);
-    box-shadow:
-      0 0 10px rgba(orange, 0.3),
-      0 0 20px rgba(orange, 0.3),
-      0 0 60px rgba(orange, 0.3),
-      0 0 80px rgba(orange, 0.3);
+    box-shadow: 0 0 10px rgba(orange, 0.3), 0 0 20px rgba(orange, 0.3),
+      0 0 60px rgba(orange, 0.3), 0 0 80px rgba(orange, 0.3);
   }
   75% {
     transform: skewX(-10deg);
-    box-shadow:
-      0 0 10px rgba(orange, 0.4),
-      0 0 20px rgba(orange, 0.4),
-      0 0 60px rgba(orange, 0.4),
-      0 0 80px rgba(orange, 0.4);
+    box-shadow: 0 0 10px rgba(orange, 0.4), 0 0 20px rgba(orange, 0.4),
+      0 0 60px rgba(orange, 0.4), 0 0 80px rgba(orange, 0.4);
   }
   100% {
     transform: skewX(5deg);
-    box-shadow:
-      0 0 10px rgba(orange, 0.5),
-      0 0 20px rgba(orange, 0.5),
-      0 0 60px rgba(orange, 0.5),
-      0 0 80px rgba(orange, 0.5);
+    box-shadow: 0 0 10px rgba(orange, 0.5), 0 0 20px rgba(orange, 0.5),
+      0 0 60px rgba(orange, 0.5), 0 0 80px rgba(orange, 0.5);
   }
 }

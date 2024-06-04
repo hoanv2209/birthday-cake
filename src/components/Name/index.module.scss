@@ -1,0 +1,27 @@
+.name {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100dvw;
+  z-index: 40;
+  font-family: HuiP;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #f0e4d0;
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 820px) {
+  .name {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .name {
+    font-size: 6rem;
+  }
+}

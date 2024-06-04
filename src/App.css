@@ -39,3 +39,13 @@
 .read-the-docs {
   color: #888;
 }
+
+@font-face {
+  font-family: "Hui";
+  src: local("Hui"), url(./assets/fonts/Hui/HuiFont29.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "HuiP";
+  src: local("HuiP"), url(./assets/fonts/HuiP/HuiFontP29.ttf) format("opentype");
+}
